@@ -1,0 +1,61 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+       <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+            <div class="container">
+                <div class="header">
+                    <img src="images/header.png" alt="">
+                </div>
+                <div class="feed" id="feed-body"></div>
+
+                
+
+
+                <div class="display-order">
+                    <div id="menu-order" class="menu-order-heading"></div>
+                    <div id="order-container" class="order-container"></div>
+                    <div id="total-price"></div>
+                    <div id="complete-order" class="complete-order">
+                        <button id="payment-btn" class="payment-btn">Complete Order</button>
+                    </div>
+                </div>
+               
+
+                <div class="form-container" id="form-container">
+                    <div class="form-header">Enter Card Details</div>
+                    <form id="form-inner">
+                        <input 
+                        type="text"
+                        placeholder="Enter your name"
+                        name="name" required>
+                        <input 
+                        type="number"
+                        placeholder="Enter card number"
+                        name="card-number" required>
+                        <input 
+                        type="text"
+                        placeholder="Enter CVV"
+                        name="cvv" required>
+                        <button type="submit" class="pay-btn">Pay</button>
+                    </form>
+                </div>
+               
+            </div>
+       
+            
+
+
+
+         
+
+
+
+
+
+
+
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
