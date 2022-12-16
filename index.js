@@ -19,19 +19,18 @@ function getMenuHtml(){
       
         feedMenu += `
             <div class="menu-container">
-                <div class="menu">
+               <div class="menu-box">
                     <div class="menu-img">
                         <img src="${menu.pic}" alt="">
                     </div>
                     <div class="menu-text">
                         <h2>${menu.name}</h2>
-                        <h4>ingredients</h4>
+                        <h4 class="ingredients">${menu.ingredients}</h4>
                         <h3>$${menu.price}</h3>
                     </div>
-                   
-                        <button id="${index}" class="add-btn">+</button>
-                    
-                </div>
+                </div>   
+                    <button id="${index}" class="add-btn">+</button>  
+                
                 </div>
               ` 
 
@@ -72,7 +71,7 @@ function renderCartItem(){
                     <h3>${cartItem.name}</h3>
                     <button class="remove-btn" id="${index}">remove</button>
                 </div>
-                    <h4>$${cartItem.price}</h4>
+                <h4>$${cartItem.price}</h4>
             </div>
                  `
     })
@@ -89,7 +88,10 @@ function getTotalPrice(){
     cartItems.forEach(function(cartItem){
         total += cartItem.price
     })
-   totalPrice.innerHTML = total
+   totalPrice.innerHTML = `<div class="total-price-card">
+                            <h2>Total price:</h2>
+                            <p class="total-price">$ ${total}</p>
+                            </div>`
 
    //render payment button if total cost is > 0
    if(total > 0){
